@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------- *
+ *        @mixin-module
+ * ------------------------------------------------- */
+@mixin mixin-tit-promotion-area($size) {
+	background: #fff;
+	width: $size;
+	margin: 0 auto;
+}
+@mixin link-transfer {
+	color: #000;
+	display: block;
+
+	-webkit-transition-duration: 1.5s;
+	transition-duration: 1.5s;
+
+	&:hover {
+		filter:alpha(opacity=50);
+		-moz-opacity: 0.50;
+		opacity: 0.50;
+		text-decoration: none;
+	}
+}
+@mixin bg-image-cover($padding-size:70px) {
+	-moz-background-size:cover;
+	background-size:cover;
+	padding-top: $padding-size;
+}
+
+/* Mixin */
+@mixin border-radius($property:none){
+	border-radius: $property;
+	-webkit-border-radius: $property;
+	-moz-border-radius: $property;
+}
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+/*
+@mixin position($position:static,$top:auto,$right:auto,$bottom:auto,$left:auto,$z-index:0) {
+  position:$position;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  z-index:$z-index;
+}
+@mixin transform($property:none){
+    transform:$property;
+    -webkit-transform:$property;
+    -moz-transform:$property;
+    -o-transform:$property;
+    -ms-transform:$property;
+}
+@mixin transition($property:none){
+    transition:$property;
+    -webkit-transition:$property;
+    -moz-transition:$property;
+    -o-transition:$property;
+}
+*/
+@mixin opacity($property:0,$propertyIE:0){
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$propertyIE})";
+    filter: alpha(opacity=$propertyIE);
+    -moz-opacity: $property;
+    -khtml-opacity: $property;
+    opacity: $property;
+}
+
+
+/* ------------------------------------------------- *
+ *        common-module
+ * ------------------------------------------------- */
+$path-img: '../../common/img/';
+$blue:#32b4df;
+$dark-blue:#1470cc;
+$light-blue:#0bafe6;
+
+.noto100 {font-weight:100;}
+.noto300 {font-weight:300;}
+.noto400 {font-weight:400;}
+.noto500 {font-weight:500;}
+.noto700 {font-weight:700;}
+.noto900 {font-weight:900;}
+
+.dark-blue {
+	color: $dark-blue;
+}
+.light-blue {
+	color: $light-blue;
+}
+//@import 'icon/*.png';
+//@include all-icon-sprites;
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+html,
+body {
+    height: 100%;
+}
+body {
+ 	background: #fff;
+ 	font-size: 18px;
+ 	line-height: 1.75;
+	color: #444;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0px;
+	padding:0px;
+	font-size: 1.0em;
+	line-height: 1.75;
+}
+li {
+	list-style-type: none;
+}
+
+/*gridのgutter調整*/
+.no-gutters {
+	margin-right: 0px;
+	margin-left: 0px;
+	& > [class^="col-"],
+	& > [class*="col-"] {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
+
+.row-30{
+	margin-left:-15px;
+	margin-right:-15px;
+	> div{
+		padding-right:15px;
+		padding-left:15px;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+//テキスト選択時
+::-moz-selection {
+	background: $blue;
+}
+::selection {
+	background: $blue;
+}
+::-moz-selection {
+	background: $blue;
+}
+
+
+
+
+/* ------------------------------------------------- *
+ *        @extend-module
+ * ------------------------------------------------- */
+.mt20 {
+	margin-top: 20px;
+}
+.mt70 {
+	margin-top: 70px;
+}
+.mt80 {
+	margin-top: 80px;
+}
+.mt100 {
+	margin-top: 100px;
+}
+.mt120 {
+	margin-top: 120px;
+}
+.height61 {
+	height: 61px;
+}
+.h1-size {
+	margin-top: 50px;
+	font-size:1.1em;
+	font-weight: bold;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border-bottom: 3px solid #ebebeb;
+  white-space: nowrap;
+  //font-size: 1.1em;
+  line-height: 1.75;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $blue;
+  letter-spacing: 3.0px;
+  z-index: 1;
+  position: relative;
+
+  & a {
+  	color: #000;
+
+  	&:hover {
+  		text-decoration: none;
+  	}
+  }
+
+}
+
+.h2-size {
+	font-size: 54px;
+	line-height: 1.4;
+	letter-spacing: 1.2px;
+	margin-bottom: 300px;
+}
+.h2-size-l {
+	font-size: -webkit-calc(54px * 1.40) ;
+	font-size: calc(54px * 1.40) ;
+}
+
+/* ------------------------------------------------- *
+ *        header-module
+ * ------------------------------------------------- */
+.area-header {
+	background-color: $blue;
+	padding: 78px 0px 81px 0px;
+
+	.bg-main-visual-pc {
+		z-index: 1;
+		position: relative;
+	}
+	/*h1 {
+		font-size: 1.2em;
+	}*/
+	.btn-contact-header {
+		z-index: 2;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		right: 0px;
+	}
+}
+
+
+
+
+
+
+/* ------------------------------------------------- *
+ *        problem-module
+ * ------------------------------------------------- */
+.area-problem {
+	background: url(#{$path-img}bg1.png) repeat;
+	padding-top: 60px;
+}
+
+
+
+
+/* ------------------------------------------------- *
+ *        footer-module
+ * ------------------------------------------------- */
+footer {
+	margin-top: 80px;
+	color: #fff;
+}
+
+//footer-navi
+.footer-navi {
+	background-color: $blue;
+	text-align: center;
+	padding: 60px 0px;
+
+	& li {
+		width: auto;
+	}
+	& li a {
+		color: #fff;
+	}
+	& li a:hover {
+		text-decoration: none;
+		color: $blue;
+	}
+
+	.inline {
+		text-align: center;
+		& li {
+			display: inline;
+		}
+		& li:after {
+			padding: 0px 15px;
+			content:"|";
+		}
+		& li:last-child:after {
+			content:none;
+			padding-right: 0px;
+		}
+	}
+}
+
+
+
+
+
+
+/* ------------------------------------------------- *
+ *        tablet-module
+ * ------------------------------------------------- */
+@media screen and (max-width:991px) {
+	//header-module
+	.area-header {
+		.btn-contact-header {
+			bottom: -10px;
+			right: 0px;
+		}
+	}
+}
+
+
+/* ------------------------------------------------- *
+ *        smartphone-module
+ * ------------------------------------------------- */
+@media screen and (max-width:767px) {
+	//header-module
+	.area-header {
+		padding: 10px 0px 30px 0px;
+		.btn-contact-header {
+			position: static;
+			margin-top: 20px;
+		}
+	}
+}
+
+
+
+//////bootstrap tag
+/*
+visible-xs
+col-sm-14 col-sm-offset-5
+xs sm md lg
+
+//////link tag
+img {
+	-webkit-transition-duration: 1s;
+	transition-duration: 0.8s;
+}
+a:hover img, a:active img {
+	filter: alpha(opacity=55);
+	-moz-opacity: 0.55;
+	opacity: 0.55;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	-webkit-transition-duration: 1s;
+	transition-duration: 0.8s;
+	&:link {color: #000;}
+	&:visited {color: #000;}
+	&:hover {color: #000; filter: alpha(opacity=45);-moz-opacity: 0.45;opacity: 0.45;}
+	&:active {color: #000; filter: alpha(opacity=45);-moz-opacity: 0.45;opacity: 0.45;}
+}
+
+@extend .font-average;
+
+//スモールPC
+@media screen and (max-width:1199px) {
+}
+//タブレット
+@media screen and (max-width:991px) {
+}
+//スマホ
+@media screen and (max-width:767px) {
+}
+*/
+
+
