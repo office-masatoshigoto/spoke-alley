@@ -82,6 +82,7 @@ a {
 .mt25 {margin-top: 25px;}
 .mt30 {margin-top: 30px;}
 .mt50 {margin-top: 50px;}
+.mt60 {margin-top: 60px;}
 .mt70 {margin-top: 70px;}
 .mt80 {margin-top: 80px;}
 .mt100 {margin-top: 100px;}
@@ -232,6 +233,7 @@ h4 {
 	h2 {
 		margin-bottom: 40px;
 	}
+	/*
 	.box-h3 {
 		z-index: 1;
 		position: relative;
@@ -253,6 +255,7 @@ h4 {
 		margin: 40px 0px 0px 20px;
 		transform: rotate(12deg);
 	}
+	*/
 
 	.tit-compare {
 		@extend .font-tit;
@@ -728,8 +731,9 @@ footer {
 	.area-compare {
 		padding: 50px 0px 50px 0px;
 		h2 {
-			margin-bottom: 40px;
+			margin-bottom: 0px;
 		}
+		/*
 		.badge-sp {
 			width: 100px;
 			height: 107px;
@@ -744,6 +748,7 @@ footer {
 			text-align: center;
 			color: #fff;
 		}
+		*/
 
 		.tit-compare {
 			margin-top: 0px;
@@ -755,7 +760,7 @@ footer {
 			transform: scale(0.75);
 		}
 		img {
-			margin-top: 20px;
+			margin-top: 0px;
 		}
 		.text-right {
 			text-align: left;

@@ -78,6 +78,10 @@ a {
   margin-top: 50px;
 }
 
+.mt60 {
+  margin-top: 60px;
+}
+
 .mt70 {
   margin-top: 70px;
 }
@@ -242,32 +246,34 @@ h4 {
  * ------------------------------------------------- */
 .area-compare {
   padding: 60px 0px 60px 0px;
+  /*
+  .box-h3 {
+  	z-index: 1;
+  	position: relative;
+  }
+  .badge {
+  	width: 148px;
+  	height: 158px;
+  	background: url(../../common/img/compare1.png) no-repeat;
+  	z-index: 2;
+  	position: absolute;
+  	right: 0;
+  	top: 0;
+  	margin: -18px 20px 0px 0px;
+  }
+  .txt-badge {
+  	font-size: 16px;
+  	line-height: 22px;
+  	letter-spacing: 0.5px;
+  	margin: 40px 0px 0px 20px;
+  	transform: rotate(12deg);
+  }
+  */
   /* for win ie6 */
   /* for win ie7 */
 }
 .area-compare h2 {
   margin-bottom: 40px;
-}
-.area-compare .box-h3 {
-  z-index: 1;
-  position: relative;
-}
-.area-compare .badge {
-  width: 148px;
-  height: 158px;
-  background: url(../../common/img/compare1.png) no-repeat;
-  z-index: 2;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: -18px 20px 0px 0px;
-}
-.area-compare .txt-badge {
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  margin: 40px 0px 0px 20px;
-  transform: rotate(12deg);
 }
 .area-compare ul.list {
   margin-left: 1.5em;
@@ -747,7 +753,7 @@ footer {
     padding: 50px 0px 50px 0px;
   }
   .area-compare h2 {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   .area-compare .badge-sp {
     width: 100px;
@@ -771,7 +777,7 @@ footer {
     transform: scale(0.75);
   }
   .area-compare img {
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .area-compare .text-right {
     text-align: left;
