@@ -656,13 +656,14 @@ footer {
     font-size: calc(32px * 1.40);
   }
 
+  /*
   h3 {
-    font-size: 26px;
-    letter-spacing: 1.0px;
-    line-height: 1.4;
-    padding: 15px 0px;
+  	font-size: 26px;
+  	letter-spacing: 1.0px;
+  	line-height: 1.4;
+  	padding: 15px 0px;
   }
-
+  */
   h4 {
     font-size: 20px;
     margin-top: 30px;
@@ -751,30 +752,37 @@ footer {
   }*/
   .area-compare {
     padding: 50px 0px 50px 0px;
+    /*
+    .badge-sp {
+    	width: 100px;
+    	height: 107px;
+    	background: url(../../common/img/compare1-sp.png) no-repeat;
+    	margin: 0 auto;
+    	margin-top: -55px;
+    }
+    .txt-badge {
+    	font-size: 13.5px;
+    	line-height: 20px;
+    	padding: 23px 0px 0px 0px;
+    	text-align: center;
+    	color: #fff;
+    }
+    */
   }
   .area-compare h2 {
     margin-bottom: 0px;
   }
-  .area-compare .badge-sp {
-    width: 100px;
-    height: 107px;
-    background: url(../../common/img/compare1-sp.png) no-repeat;
-    margin: 0 auto;
-    margin-top: -55px;
-  }
-  .area-compare .txt-badge {
-    font-size: 13.5px;
-    line-height: 20px;
-    padding: 23px 0px 0px 0px;
-    text-align: center;
-    color: #fff;
+  .area-compare h4 {
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .area-compare .tit-compare {
     margin-top: 0px;
   }
   .area-compare .icon img {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65);
   }
   .area-compare img {
     margin-top: 0px;
@@ -788,6 +796,9 @@ footer {
   }
   .area-compare .mt80 {
     margin-top: 60px;
+  }
+  .area-compare .font-s {
+    margin-bottom: 20px;
   }
 
   .area-voice {

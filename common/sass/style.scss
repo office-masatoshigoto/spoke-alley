@@ -637,12 +637,14 @@ footer {
 		font-size: -webkit-calc(32px * 1.40) ;
 		font-size: calc(32px * 1.40) ;
 	}
+	/*
 	h3 {
 		font-size: 26px;
 		letter-spacing: 1.0px;
 		line-height: 1.4;
 		padding: 15px 0px;
 	}
+	*/
 	h4 {
 		font-size: 20px;
 		margin-top: 30px;
@@ -733,6 +735,11 @@ footer {
 		h2 {
 			margin-bottom: 0px;
 		}
+		h4 {
+			line-height: 1.4;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
 		/*
 		.badge-sp {
 			width: 100px;
@@ -756,8 +763,8 @@ footer {
 		.txt-compare {
 		}
 		.icon img {
-			-webkit-transform: scale(0.75);
-			transform: scale(0.75);
+			-webkit-transform: scale(0.65);
+			transform: scale(0.65);
 		}
 		img {
 			margin-top: 0px;
@@ -771,6 +778,9 @@ footer {
 		}
 		.mt80 {
 			margin-top: 60px;
+		}
+		.font-s {
+			margin-bottom: 20px;
 		}
 	}
 
