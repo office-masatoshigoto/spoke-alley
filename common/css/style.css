@@ -169,6 +169,7 @@ h4 {
 
 .font-s {
   font-size: 11px;
+  line-height: 1.5;
 }
 
 .hvr-grow {
@@ -470,6 +471,8 @@ footer {
 #gFooter .fLink li {
   margin: 0 4px;
   display: inline;
+  width: 40px;
+  height: 40px;
 }
 
 #gFooter .fLink li img {
@@ -477,6 +480,19 @@ footer {
   vertical-align: top;
 }
 
+/*
+#gFooter .fLink li.fb {
+	background: url(../img/facebook_over.png) no-repeat;
+	background-position: top;
+	background-size: 40px 40px;
+	width: 40px;
+	height: 40px;
+}
+#gFooter .fLink li.fb a:hover img {
+	visibility: hidden;
+
+}
+*/
 #gFooter .copyright {
   color: #444;
   margin: 0 auto;
